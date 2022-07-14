@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { LightTheme } from './LightTheme'
 
 export default createGlobalStyle`
   * {
@@ -8,13 +9,13 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
+    background: ${LightTheme.palette.background.default};
+    color: ${LightTheme.palette.primary.main};
     font: 400 16px Roboto, sans-serif;
   }
 
   a {
-    color: ${props => props.theme.colors.background};
+    color: ${LightTheme.palette.background.default};
     text-decoration: none;
   }
 `
